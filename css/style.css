@@ -1,0 +1,281 @@
+html, body{
+    font-family: georgia, 'times new roman', times, serif;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+}
+
+#tudo {
+    min-height: 100%;
+    position: relative;
+}
+
+#navbar ul{
+    background-image: url("../images/skulls.png");
+    border-bottom: 1px solid #000000;
+    padding: 15px;
+    margin-top: -53px;
+    height: 70px;
+    box-shadow: 0px 1px 10px #000000;
+}
+
+#navbar ul li{
+    display: inline-block;
+}
+
+#homeLink{
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/Link_Playing_Ocarina.png"); 
+    background-size: 100px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: -50px;
+}
+
+#left{
+    margin-left: 25%;
+    margin-top: 2%;
+    display: inline-block;
+    float: left;
+}
+#right{
+    margin-right: 30%;
+    margin-top: 2%;
+    display: inline-block;
+    float: right;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: #000000;
+}
+
+#navbar ul li a:hover{
+    color: #71B61C;
+}
+
+#session{
+    width: 25%;
+    height: 25px;
+    float: left;
+    position: absolute;
+    padding: 2px;
+    margin: 0px;
+    text-align: left;
+}
+
+#session ul{
+    position:relative;
+    padding: 2px;
+    margin: 0px;
+    display: inline-block;
+    height: 24px;
+}
+
+#session li{
+    list-style:none;
+    float:left;
+}
+
+#session a, #session a:visited{
+    display:block;
+    color:#000;
+    font-weight: bold;
+    padding:10px 20px 10px 0;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+#session a:hover{
+    color: #71B61C;
+}
+
+#session ul ul{
+    border: 1px solid #000;
+    display:none;
+    position:absolute;
+    top:39px;
+    height:auto;
+    padding:0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px #000000;
+}
+
+#session ul ul li{
+    clear:both;
+    background:#fff;
+}
+
+#session ul ul li a:hover{
+    background: #71B61C;
+    color: #fff;
+}
+
+#session ul ul a,#session ul ul a:visited{
+    width: 130px;
+    font-size:13px;
+    padding:5px 10px;
+    font-weight: normal;
+}
+
+#content{
+    padding: 10px;
+    background-color: #fff;
+    width: 75%;
+    margin: auto;
+    text-align: justify;
+    padding-bottom: 190px;
+}
+
+.produto{
+    width: 29%;
+    border: 1px solid #777;
+    border-radius: 4px;
+    text-align: left;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.produto img{
+    width: 25%;
+    margin: auto;
+    display: block;
+}
+
+.produto span{
+    color: #000;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px #000;
+    display: block;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.produto div{
+    margin: auto;
+    width: 90%;
+    text-align: justify;
+    border: 1px solid #71B61C;
+    padding: 10px;
+    background-color: #ffffff;
+    display: block;
+}
+
+.produto a{
+    text-decoration: none;
+}
+
+.produto label{
+    margin: 10px 0px;
+    float: right;
+    display: inline-block;
+}
+
+label.error {
+position: relative;
+background-color: #71B61C;
+border-radius: 10px;
+width: 100px;
+min-height: 44px;
+padding: 10px;
+color: white;
+text-align: center;
+}
+ 
+label.error:after {
+content: '';
+position: absolute;
+width: 0;
+height: 0;
+border: 12px solid;
+border-top-color: #71B61C;
+top: 100%;
+left: 50%;
+margin-left: -13px; /* ajustar pela largura do balão */
+}
+
+.quantity{
+    width: 11%;
+    text-align: center;
+    float: right;
+    margin: 10px;
+    display: inline-block;
+}
+
+.carrinho, .user{
+    width: 28%;
+    border: 1px solid #777777;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.carrinho img{
+    width: 20%;
+    float: left;
+    margin-right: 20px;
+}
+
+#editProduct{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#area{
+    resize: none;
+    font-family: georgia, 'times new roman', times, serif;
+    font-size: 15px;
+    width: 145px;
+    height: 65px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.button, #submit{
+    background-color: #3f680c;
+    font-size: 100%;
+    font-weight: normal;
+    height: 2.142em;
+    min-width: 5.3em;
+    border: 0px;
+    color: #fff;
+    margin: 5px;
+    cursor:pointer;
+}
+
+.button:hover, #submit:hover{
+    background-color: #71B61C;
+}
+
+#grass{
+    background-image: url(../../images/grass.png);
+    width: 100%;
+    height: 34px;
+    margin-top: -25px;
+}
+
+#footer{
+    background: -webkit-linear-gradient(#3f680c, #000000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3f680c, #000000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3f680c, #000000); /* For Firefox 3.6 to 15 */
+    border-top: 3px dashed #ffffff;
+    height: 165px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+#footer img{
+    width: 14%;
+    float: right;
+    display: inline-block;
+    margin-top: -140px;
+}
