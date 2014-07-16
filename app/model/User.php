@@ -1,6 +1,7 @@
 <?php
 /**
-* This class make login, logout, registering, editing, validation and delete a user
+* This class make login, logout, registering, 
+* editing, validation and delete a user
 */
 class User
 {
@@ -13,22 +14,35 @@ class User
 
     public function registering()
     {
-        $insert = $this->db->pdo->prepare("INSERT INTO user (name, user, pass) VALUES (:name, :user, :pass)");
-
+        $insert = $this->db->pdo->prepare(
+            "INSERT INTO user (name, user, pass) 
+            VALUES (:name, :user, :pass)"
+        );
+        
+        $pass = md5($_POST['pass']);
         $insert->bindParam(':name', $_POST['name']);
         $insert->bindParam(':user', $_POST['user']);
-        $insert->bindParam(':pass', md5($_POST['pass']));
+        $insert->bindParam(':pass', $pass);
 
-        try{
-            $insert->execute();
-            header("location: ?view=login");
-            return true;
+        $ver = $this->verifyUser();
+        if ($ver) {
+            try{
+                $insert->execute();
+                header("location: ?view=login");
+                return true;
+            }
+            catch (PDOException $e) {
+                print "Error!: " . $e->getMessage() . "<br/>";
+                return false;
+                die();
+            }        
         }
-        catch (PDOException $e) {
-            print "Error!: " . $e->getMessage() . "<br/>";
-            return false;
-            die();
-        }        
+        $message = "
+            Usuário <strong>".$_POST['user']."</strong> já cadastrado<br>
+            Tente outro nome de usuário
+        ";
+        return $message;
+
     }
 
     public function verifyUser()
@@ -38,7 +52,7 @@ class User
             user = :user LIMIT 1"
         );
 
-        $verify->bindParam($_POST['user']);
+        $verify->bindParam(':user', $_POST['user']);
         $verify->execute();
 
         if ($verify->rowCount() == 1) {

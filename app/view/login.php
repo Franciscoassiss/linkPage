@@ -1,6 +1,9 @@
 <div id="content">
     <h2>Login</h2>
     <?php
+        if (isset($this->params['result'])){
+            echo "<div class='error2'>".$this->params['result']."</div>";
+        }
         if (!isset($_SESSION['user'])) {
             echo
             '
@@ -16,6 +19,5 @@
             <p>Você já está logado ^^, se quiser sair da sua conta clique 
             <a href='?view=login&model=user&action=logout'>aqui</a></p>";
         }
-        print_r($this->params);
     ?>
 </div>

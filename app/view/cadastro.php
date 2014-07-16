@@ -1,5 +1,10 @@
 <div id="content">
     <h2>Cadastro</h2>
+    <?php
+    if (isset($this->params['result'])){
+        echo "<div class='error2'>".$this->params['result']."</div>";
+    }
+    ?>
     <form id="cadastro" action="?view=cadastro&model=user&action=registering" method="post">
         <div class="description">Nome:</div> <input type="text" name="name" id="name" class="text"><br \>
         <div class="description">Usuario:</div> <input type="text" name="user" id="user" class="text"><br \>

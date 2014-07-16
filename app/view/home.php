@@ -4,26 +4,26 @@
 
     <h2>Weapons</h2>
 
-    Kokiri Sword
+    Kokiri Sword<br>
     Master Sowrd
 
     <h2>Shields</h2>
 
-    Deku Shield
+    Deku Shield<br>
     Hylian Shield
 
     <h2>Places I visited</h2>
 
-    Kokiri Forost
-    Lost Wolds
-    Inside of Jabu-Jabu
+    Kokiri Forost<br>
+    Lost Wolds<br>
+    Inside of Jabu-Jabu<br>
     Inside of Deku Tree
 
     <h2>Some Friends</h2>
 
-    Saria
-    Kapora Kaepora
-    Navi
-    Epona
+    Saria<br>
+    Kapora Kaepora<br>
+    Navi<br>
+    Epona<br>
     Ezlo
 </div>

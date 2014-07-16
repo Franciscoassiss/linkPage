@@ -35,13 +35,13 @@ html, body{
 }
 
 #left{
-    margin-left: 25%;
+    margin-left: 21%;
     margin-top: 2%;
     display: inline-block;
     float: left;
 }
 #right{
-    margin-right: 30%;
+    margin-right: 25%;
     margin-top: 2%;
     display: inline-block;
     float: right;
@@ -187,6 +187,7 @@ min-height: 44px;
 padding: 10px;
 color: white;
 text-align: center;
+margin-left: 3%;
 }
  
 label.error:after {
@@ -195,10 +196,20 @@ position: absolute;
 width: 0;
 height: 0;
 border: 12px solid;
-border-top-color: #71B61C;
-top: 100%;
-left: 50%;
-margin-left: -13px; /* ajustar pela largura do balão */
+border-right-color: #71B61C;
+top: 50%;
+right: 100%;
+margin-top: -11px;
+}
+
+div.error2{
+    position: relative;
+    background-color: #71B61C;
+    border-radius: 7px;
+    width: 25%;
+    padding: 5px;
+    color: white;
+    text-align: center;
 }
 
 .quantity{
