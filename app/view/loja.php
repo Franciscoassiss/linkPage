@@ -16,7 +16,10 @@
             </div>
             <input type="submit" class="button . buy" name="buy" value="Comprar">
             <input type="number" name="quantity" class="quantity" value="1" min="1" max="'.$row["quantity"].'">
-            <label>qtd:</label>';
+            <label>qtd:</label>
+            <a href="?view=listaDesejos&model=product&action=addWish&id='.$row["id"].'">
+                <input type="button" class ="button . wish" name="addWish" id="addWish" Value="Desejar">
+            </a>';
             
             if (isset($_SESSION['id']) and $_SESSION['id'] == 1) {
                 echo '
@@ -29,7 +32,7 @@
                     </a>
                 ';
             }
-    echo '</form>';
-}
+        echo '</form>';
+    }
     ?>
 </div>

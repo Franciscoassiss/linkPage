@@ -5,6 +5,8 @@
 class Product
 {
     private $db;
+    private $id;
+    private $wishList = array();
 
     function __construct()
     {
@@ -96,4 +98,38 @@ class Product
         }
     }
 
+    public function addWish()
+    {
+        if (isset($_SESSION['user'])) {
+            $this->id = $_GET['id'];
+
+            $product = $this->db->pdo->query(
+                "SELECT * FROM product WHERE id = ". $this->id
+            );
+
+            if ($product->rowCount() == 1) {
+                foreach ($product as $key) {
+                    $this->wishList['id'] = $key['id'];
+                    $this->wishList['name'] = $key['name'];
+                    $this->wishList['value'] = $key['value'];
+                    $this->wishList['image'] = $key['image'];
+                }
+                $_SESSION['wishList'][$this->id] = $this->wishList;
+            }
+        }
+        else{
+            header('location: ?view=login');
+        }
+    }
+
+    public function removeToWish()
+    {
+        $this->id = $_GET['id'];
+        if (isset($_SESSION['wishList'][$this->id])) {
+            unset($_SESSION['wishList'][$this->id]);
+            header("location: ?view=listaDesejos&model=product");
+            return true;
+        }
+        return false;
+    }
 }

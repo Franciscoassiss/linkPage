@@ -236,9 +236,9 @@ $(document).ready(function(){
 
  	$(".buy").mouseover(function(){
  		$(this).animate({
- 			width: "170px"
+ 			width: "100px"
 		}, 300 );
-		$(this).val("Adicionar ao Carrinho");
+		$(this).val("Carrinho");
  	});
 
  	$(".buy").mouseleave(function(){
@@ -246,6 +246,20 @@ $(document).ready(function(){
  			width: "5.3em"
  		}, 300);
  		$(this).val("Comprar");
+ 	});
+
+ 	$(".wish").mouseover(function(){
+ 		$(this).animate({
+ 			width: "100px"
+		}, 300 );
+		$(this).val("Desejos");
+ 	});
+
+ 	$(".wish").mouseleave(function(){
+ 		$(this).animate({
+ 			width: "5.3em"
+ 		}, 300);
+ 		$(this).val("Desejar");
  	});
 
  	$("#login #submit").click(function(){
